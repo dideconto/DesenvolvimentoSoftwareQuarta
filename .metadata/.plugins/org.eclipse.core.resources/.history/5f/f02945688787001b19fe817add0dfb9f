@@ -1,0 +1,13 @@
+
+public class Cliente {
+
+	//9223372036854775808
+	//99999999999
+	//2147483648
+	//05363419904
+	
+	//Características, atributos ou propriedades
+	String nome;
+	String cpf;
+
+}

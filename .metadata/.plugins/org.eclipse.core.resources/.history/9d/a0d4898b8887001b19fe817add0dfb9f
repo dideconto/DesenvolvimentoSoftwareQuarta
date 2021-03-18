@@ -1,0 +1,10 @@
+
+//Modificador de acesso -> public, private ou protected 
+
+public class Cliente {
+
+	//Características, atributos ou propriedades
+	public String nome;
+	private String cpf;
+
+}
