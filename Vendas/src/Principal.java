@@ -1,11 +1,15 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Principal {
 
+	
+	
 	public static void main(String[] args) {
 		int opcao;
 		Scanner sc = new Scanner(System.in);
 		Cliente cliente = new Cliente();
+		ArrayList<Cliente> clientes = new ArrayList<Cliente>();
 		
 		do {
 			System.out.println("\n-- PROJETO DE VENDAS --\n");
@@ -20,11 +24,13 @@ public class Principal {
 				System.out.println("Digite o nome do cliente:");
 				cliente.setNome(sc.next());
 				System.out.println(cliente.getNome());
+				clientes.add(cliente);
 //				System.out.println("Digite o CPF do cliente:");
 //				cpf = sc.nextLine();
 				break;
 			case 2:
 				System.out.println("\n-- LISTAR CLIENTES --\n");
+				System.out.println(clientes);
 				break;
 			case 0:
 				System.out.println("\nSaindo...");
