@@ -1,8 +1,0 @@
-
-public class Cliente {
-	
-	//Características, atributos ou propriedades
-	String nome;
-	String cpf;
-
-}

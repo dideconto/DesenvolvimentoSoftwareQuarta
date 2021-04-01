@@ -6,6 +6,12 @@ public class Livro {
 	public Livro() {
 		setCriadoEm(new Date());
 	}
+	
+	public Livro(String isbn) {
+		setCriadoEm(new Date());
+//		setIsbn(isbn);
+		this.isbn = isbn;
+	}
 
 	//Atributos
 	private String nome;
@@ -52,6 +58,7 @@ public class Livro {
 		return isbn;
 	}
 	public void setIsbn(String isbn) {
+		System.out.println("Guardamos o ISBN");
 		this.isbn = isbn;
 	}
 	public String getGenero() {
@@ -76,7 +83,8 @@ public class Livro {
 	
 	@Override
 	public String toString() {
-		return "Nome: " + getNome() + " | Ano: " + getAno() + " | Data: " + getCriadoEm();
+		return "Nome: " + getNome() + " | Ano: " + getAno() + " | Data: " + getCriadoEm() + " | ISBN: " 
+				+ getIsbn();
 	}
 	
 }
