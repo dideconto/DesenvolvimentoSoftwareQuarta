@@ -5,16 +5,12 @@ import java.util.Scanner;
 import models.Cliente;
 
 public class Principal {
-	
-	public static void teste() {}
-	public static int idade;
 
 	public static void main(String[] args) {
 		
 		int opcao;
 		Scanner sc = new Scanner(System.in);
 		Cliente cliente;
-		ArrayList<Cliente> clientes = new ArrayList<Cliente>();	
 		
 		do {
 			System.out.println("\n-- PROJETO DE VENDAS --\n");
@@ -26,33 +22,33 @@ public class Principal {
 			sc.nextLine();
 			switch (opcao) {
 			case 1:
-				System.out.println("\n".repeat(15));
-				cliente = new Cliente();
-				System.out.println("\n-- CADASTRAR CLIENTE --\n");
-				System.out.println("Digite o nome do cliente:");
-				cliente.setNome(sc.nextLine());
-				System.out.println("Digite o CPF do cliente:");
-				cliente.setCpf(sc.nextLine());
-				boolean clienteEncontrado = false;				
-				if(clientes.size() > 0){					
-					for (Cliente clienteCadastrado : clientes) {
-						if(clienteCadastrado.getCpf().equals(cliente.getCpf())) {
-							System.out.println("Esse cliente já existe!");
-							clienteEncontrado = true;
-							break;
-						}
-					}						
-					if(!clienteEncontrado) {
-						clientes.add(cliente);
-						System.out.println("Cliente cadastrado com sucesso!");
-					}
-				}else {			
-					clientes.add(cliente);
-					System.out.println("Cliente cadastrado com sucesso!");
-				}
+//				System.out.println("\n".repeat(15));
+//				cliente = new Cliente();
+//				System.out.println("\n-- CADASTRAR CLIENTE --\n");
+//				System.out.println("Digite o nome do cliente:");
+//				cliente.setNome(sc.nextLine());
+//				System.out.println("Digite o CPF do cliente:");
+//				cliente.setCpf(sc.nextLine());
+//				boolean clienteEncontrado = false;				
+//				if(clientes.size() > 0){					
+//					for (Cliente clienteCadastrado : clientes) {
+//						if(clienteCadastrado.getCpf().equals(cliente.getCpf())) {
+//							System.out.println("Esse cliente já existe!");
+//							clienteEncontrado = true;
+//							break;
+//						}
+//					}						
+//					if(!clienteEncontrado) {
+//						clientes.add(cliente);
+//						System.out.println("Cliente cadastrado com sucesso!");
+//					}
+//				}else {			
+//					clientes.add(cliente);
+//					System.out.println("Cliente cadastrado com sucesso!");
+//				}
 				break;
 			case 2:
-				ListarCliente.renderizar(clientes);
+				ListarCliente.renderizar();
 				break;
 			case 0:
 				System.out.println("\nSaindo...");

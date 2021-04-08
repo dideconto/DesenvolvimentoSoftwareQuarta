@@ -1,15 +1,14 @@
 package views;
 
-import java.util.ArrayList;
-
+import controllers.ClienteController;
 import models.Cliente;
 
 public class ListarCliente {
 	
-	public static void renderizar(ArrayList<Cliente> clientes){
+	public static void renderizar(){
 		System.out.println("\n".repeat(15));
 		System.out.println("\n-- LISTAR CLIENTES --\n");
-		for (Cliente clienteCadastrado : clientes) {
+		for (Cliente clienteCadastrado : ClienteController.retornarClientes()) {
 			System.out.println(clienteCadastrado);
 		}
 	}
