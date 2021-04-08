@@ -1,3 +1,4 @@
+package models;
 import java.util.Date;
 
 //Modificador de acesso -> public, private ou protected
@@ -33,6 +34,12 @@ public class Cliente {
 	}
 	public void setCriadoEm(Date criadoEm) {
 		this.criadoEm = criadoEm;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		Cliente outroCliente = (Cliente) obj;
+		return getCpf().equals(outroCliente.getCpf());
 	}
 	
 	@Override
