@@ -4,11 +4,15 @@
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="Exe02"/>
     <fullyQualifiedTypeName name="Livro"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="Cliente"/>
-    <fullyQualifiedTypeName name="models.Cliente"/>
     <fullyQualifiedTypeName name="models.Vendedor"/>
     <fullyQualifiedTypeName name="views.ListarCliente"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="javax.xml.crypto.Data"/>
+    <fullyQualifiedTypeName name="views.CadastrarCliente"/>
     <fullyQualifiedTypeName name="controllers.ClienteController"/>
+    <fullyQualifiedTypeName name="models.Venda"/>
+    <fullyQualifiedTypeName name="models.Cliente"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="models.ItemVenda"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

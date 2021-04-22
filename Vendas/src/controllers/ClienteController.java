@@ -5,15 +5,21 @@ import java.util.ArrayList;
 import models.Cliente;
 
 public class ClienteController {
-	
+
 	private static ArrayList<Cliente> clientes = new ArrayList<Cliente>();	
-	
-	public static void cadastrar(Cliente cliente) {
-		
+
+	public static boolean cadastrar(Cliente cliente) {
+		for (Cliente clienteCadastrado : clientes) {
+			if(clienteCadastrado.getCpf().equals(cliente.getCpf())) {
+				return false;
+			}
+		}
+		clientes.add(cliente);
+		return true;
 	}
-	
-	public static ArrayList<Cliente> retornarClientes(){
+
+	public static ArrayList<Cliente> listar(){
 		return clientes;
 	}
-	
+
 }
