@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="Exe02"/>
     <fullyQualifiedTypeName name="Livro"/>
     <fullyQualifiedTypeName name="Cliente"/>
@@ -11,10 +10,14 @@
     <fullyQualifiedTypeName name="views.CadastrarCliente"/>
     <fullyQualifiedTypeName name="models.Venda"/>
     <fullyQualifiedTypeName name="models.Cliente"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="controllers.ClienteController"/>
     <fullyQualifiedTypeName name="controllers.ProdutoController"/>
     <fullyQualifiedTypeName name="controllers.VendaController"/>
     <fullyQualifiedTypeName name="models.ItemVenda"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+    <fullyQualifiedTypeName name="utils.Console"/>
 </qualifiedTypeNameHistroy>

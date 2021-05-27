@@ -1,15 +1,11 @@
 package views;
-import java.util.Scanner;
 
-import models.Cliente;
+import utils.Console;
 
 public class Principal {
 
-	public static void main(String[] args) {
-		
-		int opcao;
-		Scanner sc = new Scanner(System.in);
-		
+	public static void main(String[] args) {		
+		int opcao;		
 		do {
 			System.out.println("\n-- PROJETO DE VENDAS --\n");
 			System.out.println("1 - Cadastrar cliente");
@@ -20,9 +16,7 @@ public class Principal {
 			System.out.println("6 - Listar produtos");
 			System.out.println("7 - Cadastrar venda");
 			System.out.println("0 - Sair\n");
-			System.out.println("Digite a opção desejada: ");
-			opcao = sc.nextInt();
-			sc.nextLine();
+			opcao = Console.lerInteiro("Digite a opção desejada: ");
 			switch (opcao) {
 			case 1:
 				CadastrarCliente.renderizar();
@@ -53,6 +47,5 @@ public class Principal {
 				break;
 			}			
 		} while (opcao != 0);
-		sc.close();
 	}
 }
