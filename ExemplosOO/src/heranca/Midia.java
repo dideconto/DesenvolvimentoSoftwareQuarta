@@ -2,10 +2,11 @@ package heranca;
 
 import java.util.Date;
 
-public class Midia {
-	
-	public Midia() {
+public abstract class Midia {
+
+	public Midia(String dono) {
 		setCriadoEm(new Date());
+		System.out.println("Dono: " + dono);
 	}
 	
 	private int id;
@@ -37,6 +38,12 @@ public class Midia {
 				"\nTítulo: " + getTitulo() + 
 				"\nCriado em: " + getCriadoEm();
 	}
+	
+	public String retornarTipo() {
+		return "Tipo mídia -> ";
+	}
+	
+	public abstract void obrigarImplementaçãoClasseFilha();
 }
 
 

@@ -1,6 +1,10 @@
 package heranca;
 
-public class MidiaFisica extends Midia{
+public abstract class MidiaFisica extends Midia{
+	
+	public MidiaFisica(String dono) {
+		super(dono);
+	}
 
 	private int paginas;
 	private int edicao;
@@ -32,7 +36,11 @@ public class MidiaFisica extends Midia{
 				"\nPáginas: " + getPaginas() + 
 				"\nEdição: " + getEdicao();
 	}
-	
+
+	@Override
+	public String retornarTipo() {
+		return super.retornarTipo() + "Mídia Física -> ";
+	}	
 	
 }
 

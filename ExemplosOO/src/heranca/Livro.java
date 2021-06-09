@@ -1,6 +1,10 @@
 package heranca;
 
 public class Livro extends MidiaFisica{
+
+	public Livro(String dono) {
+		super(dono);
+	}
 	
 	private String autor;
 	private String isbn;
@@ -22,6 +26,17 @@ public class Livro extends MidiaFisica{
 		return super.toString() +
 				"Autor: " + getAutor() + 
 				"\nISBN: " + getIsbn();
+	}
+
+	@Override
+	public String retornarTipo() {
+		return super.retornarTipo() + "Tipo Livro";
+	}
+
+	@Override
+	public void obrigarImplementaçãoClasseFilha() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }
