@@ -3,10 +3,9 @@ package views;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import controllers.ClienteController;
+import controllers.PessoaController;
 import controllers.ProdutoController;
 import controllers.VendaController;
-import controllers.VendedorController;
 import models.Cliente;
 import models.ItemVenda;
 import models.Produto;
@@ -23,6 +22,7 @@ public class CadastrarVenda {
 	private static Produto produto;
 	private static ItemVenda item;
 	private static ArrayList<ItemVenda> itens;
+	private static PessoaController controller = PessoaController.retornarInstancia();
 
 	public static void renderizar() {
 		venda = new Venda();
@@ -32,13 +32,13 @@ public class CadastrarVenda {
 		//Cliente
 		System.out.println("Digite o CPF do cliente:");
 		cpfCliente = sc.next();
-		cliente = ClienteController.buscarPorCpf(cpfCliente);
+		cliente = (Cliente) controller.buscarPorCpf(cpfCliente);
 		if(cliente != null) {
 			venda.setCliente(cliente);
 			//Vendedor
 			System.out.println("Digite o CPF do vendedor:");
 			cpfVendedor = sc.next();
-			vendedor = VendedorController.buscarPorCpf(cpfVendedor);
+			vendedor = (Vendedor) controller.buscarPorCpf(cpfVendedor);
 			if(vendedor != null) {
 				venda.setVendedor(vendedor);
 				//Produtos

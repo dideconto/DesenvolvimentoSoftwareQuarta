@@ -24,7 +24,7 @@ public class Livro extends MidiaFisica{
 	@Override
 	public String toString() {
 		return super.toString() +
-				"Autor: " + getAutor() + 
+				"\nAutor: " + getAutor() + 
 				"\nISBN: " + getIsbn();
 	}
 

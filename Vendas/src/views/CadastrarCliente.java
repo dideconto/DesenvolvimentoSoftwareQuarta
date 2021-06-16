@@ -2,12 +2,13 @@ package views;
 
 import java.util.Scanner;
 
-import controllers.ClienteController;
+import controllers.PessoaController;
 import models.Cliente;
 
 public class CadastrarCliente {
 
 	private static Scanner sc = new Scanner(System.in);
+	private static PessoaController controller = PessoaController.retornarInstancia();
 	private static Cliente cliente;
 
 	public static void renderizar() {
@@ -18,7 +19,9 @@ public class CadastrarCliente {
 		cliente.setNome(sc.nextLine());
 		System.out.println("Digite o CPF do cliente:");
 		cliente.setCpf(sc.nextLine());
-		if(ClienteController.cadastrar(cliente)) {
+		System.out.println("Digite o e-mail do cliente:");
+		cliente.setEmail(sc.nextLine());
+		if(controller.cadastrar(cliente)) {
 			System.out.println("Cliente cadastrado com sucesso!");
 		}else {
 			System.out.println("Esse cliente já existe!");

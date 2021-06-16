@@ -1,15 +1,19 @@
 package views;
 
-import controllers.ClienteController;
+import controllers.PessoaController;
 import models.Cliente;
+import models.Pessoa;
 
 public class ListarCliente {
+	
+	private static PessoaController controller = PessoaController.retornarInstancia();
 	
 	public static void renderizar(){
 		System.out.println("\n".repeat(15));
 		System.out.println("\n-- LISTAR CLIENTES --\n");
-		for (Cliente clienteCadastrado : ClienteController.listar()) {
-			System.out.println(clienteCadastrado);
+		for (Pessoa pessoaCadastrada : controller.listar()) {
+			if(pessoaCadastrada instanceof Cliente)
+				System.out.println(pessoaCadastrada);
 		}
 	}
 	
